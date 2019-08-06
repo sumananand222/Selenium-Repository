@@ -1,0 +1,93 @@
+<html>
+<head>
+<title>Email Registration Forms</title>
+</head>
+<script >
+function check(){
+		if(document.formReg.txtUName.value==""){alert("Enter username");}
+		else if(document.formReg.txtPwd.value==""){alert("Enter password");}
+		else if(document.formReg.txtFN.value==""){alert("Enter first name");}
+		else if(document.formReg.txtLN.value==""){alert("Enter last name");}
+		else if(document.formReg.gender.value==""){alert("Enter gender");}
+		else if(document.formReg.DtOB.value==""){alert("Enter DOB");}
+		else if(document.formReg.Email.value==""){alert("Enter email");}
+		else if(document.formReg.Address.value==""){alert("Enter address");}
+		else if(document.formReg.City.value==""){alert("Enter city");}
+		else if(document.formReg.Phone.value==""){alert("Enter phone");}
+		
+	else{
+		window.location="success.html";
+		}
+	}
+</script>
+
+
+<h1 align="center">Email Registration</H1>
+       <form  name="formReg" method="post">
+
+
+           <table  align="center" style="font-family:Calibri;" >
+            
+            
+            <tr>
+                <td align="right">User Name :</td>
+                <td><input type="text" id ="txtUserName" name="txtUName" /></td>
+            </tr>
+
+ 			<tr>
+                <td align="right">Password :</td>
+                <td><input type="password" id ="txtPassword" name="txtPwd" /></td>
+            </tr>
+            
+			<tr>
+                <td align="right">First Name :</td>
+                <td><input type="text" class="Format1" id ="txtFirstName" name="txtFN" /></td>
+            </tr>
+			<tr>
+                <td align="right">Last Name :</td>
+                <td><input type="text" id ="txtLastName" name="txtLN" /></td>
+            </tr>
+			<tr>
+                <td align="right">Gender :</td>
+                <td><input type=radio id =rbMale name=gender value="Male">Male</input>
+				<input type=radio id =rbFemale name=gender value="Female">Female</input></td>
+            </tr>
+			
+			<tr>
+                <td align="right">Date of Birth :</td>
+                <td><input type="text" name="DtOB" id ="DOB" /></td>
+            </tr>
+				
+ 			<tr>
+                <td align="right">Email :</td>
+                <td><input type="email" name="Email" id ="txtEmail" /></td>
+            </tr>
+
+ 			<tr>
+                <td align="right">Address :</td>
+                <td><input  type="textarea" name="Address" id="txtAddress" multiline="true" /></td>
+            </tr>
+
+            <tr>
+	            <td align="right">City : </td>
+	            <td><select name="City" multiple>
+					  <option value="Mumbai">Mumbai</option>
+					  <option value="Pune">Pune</option>
+					  <option value="Bangalore">Bangalore</option>
+					  <option value="Chennai">Chennai</option>
+				</select></td>
+	        </tr>
+			<tr>
+                <td align="right">Phone :</td>
+                <td><input type="text" name="Phone" id ="txtPhone" /></td>
+            </tr>
+
+			<tr>
+                <td colspan=2 align="center"><br><Input type="button" name="submit" value="Submit" onclick=check()></Input>
+                <button id="myStyle" type="reset" name="reset" value="Reset" >Reset</button></td>
+            </tr>
+           </table>
+
+       </form>
+    </body>
+</html>
